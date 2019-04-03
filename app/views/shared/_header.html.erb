@@ -27,10 +27,11 @@
           <% else %>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= current_user.email %>
+              <%= current_user.name %>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">My Profile</a>
+              <!-- <a class="dropdown-item" href="#">My Profile</a> -->
+              <%= link_to "My Profile", edit_user_registration_path, class: "dropdown-item" %>
               <a class="dropdown-item" href="#">My Courses</a>
               <div class="dropdown-divider"></div>
               <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
