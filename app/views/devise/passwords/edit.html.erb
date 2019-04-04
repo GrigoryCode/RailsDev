@@ -4,7 +4,8 @@
 
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
 
-    <%= render "devise/shared/error_messages", resource: resource %>
+  <%= render partial: "shared/devisemes" %>
+  
     <%= f.hidden_field :reset_password_token %>
 
     <%= f.password_field :password, autofocus: true, autocomplete: "off", placeholder: "New password", class: "mb-3 form-control" %>
